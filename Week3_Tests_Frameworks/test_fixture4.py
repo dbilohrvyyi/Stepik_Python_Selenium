@@ -1,5 +1,5 @@
 '''
-Fixtures 3 - yield. It is finalisation function which works in a way like teardown
+Fixtures 4 - . Finalisation yield which works in a way like teardown
 
 P.S. to run use this command: pytest -s -v test_fixture2.py
 '''
@@ -10,19 +10,26 @@ from selenium import webdriver
 link = "http://selenium1py.pythonanywhere.com/"
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
-    return browser
+    yield browser
+    print("\nquit browser..")
+    browser.quit()
 
 
 class TestMainPage1():
+
     # вызываем фикстуру в тесте, передав ее как параметр
     def test_guest_should_see_login_link(self, browser):
+        print("start test1")
         browser.get(link)
         browser.find_element_by_css_selector("#login_link")
+        print("finish test1")
 
     def test_guest_should_see_basket_link_on_the_main_page(self, browser):
+        print("start test2")
         browser.get(link)
         browser.find_element_by_css_selector(".basket-mini .btn-group > a")
+        print("finish test2")
