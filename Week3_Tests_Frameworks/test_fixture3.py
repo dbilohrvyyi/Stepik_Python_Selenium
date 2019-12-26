@@ -1,7 +1,7 @@
 '''
 Fixtures 3 - yield. It is finalisation function which works in a way like teardown
 
-P.S. to run use this command: pytest -s -v test_fixture2.py
+P.S. to run use this command: pytest -s -v test_fixture3.py
 '''
 
 import pytest

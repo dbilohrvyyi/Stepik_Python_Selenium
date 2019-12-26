@@ -2,7 +2,7 @@
 Fixtures 4 - scope. For fixtures, you can specify the coverage area of fixtures.
 There are 4 of them: “function”, “class”, “module”, “session”. One time for every function, every class and so on.
 
-P.S. to run use this command: pytest -s -v test_fixture2.py
+P.S. to run use this command: pytest -s -v test_fixture4.py
 '''
 
 import pytest
