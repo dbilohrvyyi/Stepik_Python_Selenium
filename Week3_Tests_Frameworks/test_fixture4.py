@@ -1,5 +1,6 @@
 '''
-Fixtures 4 - . Finalisation yield which works in a way like teardown
+Fixtures 4 - scope. For fixtures, you can specify the coverage area of fixtures.
+There are 4 of them: “function”, “class”, “module”, “session”. One time for every function, every class and so on.
 
 P.S. to run use this command: pytest -s -v test_fixture2.py
 '''
