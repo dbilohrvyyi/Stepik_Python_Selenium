@@ -2,6 +2,8 @@
 There are very the same 2 test suites with only difference in test fixtures.
 1-st way will open and close the browser only one time to the all tests inside the  test suite (class)
 2-d way will open and close the browser for each test case
+
+P.S. run with -s option to see the print commands (pytest -s test_fixture1.py)
 '''
 
 from selenium import webdriver
