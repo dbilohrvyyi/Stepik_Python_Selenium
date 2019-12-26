@@ -1,7 +1,11 @@
 '''
-Fixtures Returning Value. We create browser which creates object WebDriver and then use it in tests. So, we create
-method browser and set it with decorator @pytest.fixture. Then we can call fixture as a parameter. By default it
-will be created for the each test.
+Fixtures Returning Value. We create fixture browser which creates object WebDriver and then use it in tests.
+
+In details, we create method browser and set it with decorator @pytest.fixture.
+Then we can call fixture as a parameter. By default it will be created for the each test.
+
+Please note, we don't use browser.quit() in this example. It is not a best practice but serves as an example
+that anyway it will be closed automatically by build-it fixture garbage collector.
 
 P.S. to run use this command: pytest -s -v test_fixture2.py
 '''
